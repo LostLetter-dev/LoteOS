@@ -1,4 +1,4 @@
-# Makefile for MyKernelProject
+# Makefile for LoteOS
 
 # Compiler and linker
 CC = gcc
@@ -56,5 +56,5 @@ $(ISO_OUTPUT): $(OUTPUT) $(GRUB_CFG)
 
 # Clean up
 clean:
-	rm -f *.o $(OUTPUT) $(GRUB_CFG) iso/boot/kernel.bin iso/boot/grub/grub.cfg iso/boot/grub/* iso/boot/* $(ISO_OUTPUT) iso/
-	rmdir iso/boot/grub iso/boot iso/ || true
+	rm -f *.o $(OUTPUT) $(GRUB_CFG) iso/boot/kernel.bin iso/boot/grub/grub.cfg
+	rm -rf iso/boot/grub iso/boot iso/ $(ISO_OUTPUT)
